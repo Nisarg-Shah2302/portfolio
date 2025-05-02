@@ -21,8 +21,8 @@ const Hero = ({ mainData }: HeroProps) => {
             <div className="absolute -z-10 min-h-screen h-full w-full">
                 <Image
                     src="/herobgc.jpg"
-                    layout="fill"
-                    objectFit="cover"
+                    width={1000}
+                    height={1000}
                     loading='lazy'
                     className='object-bottom'
                     quality={100} alt={''} />

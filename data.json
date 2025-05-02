@@ -43,54 +43,87 @@
   ],
   "skills": [
     {
-      "name": "JavaScript",
-      "image": "https://img.icons8.com/color/144/null/javascript--v1.png",
-      "category": "Frontend"
+      "category": "Frontend",
+      "technologies": [
+        {
+          "name": "React",
+          "image": "https://img.icons8.com/color/144/null/react.png"
+        }
+      ]
     },
     {
-      "name": "Firebase",
-      "image": "https://img.icons8.com/color/144/null/firebase.png",
-      "category": "Backend"
+      "category": "Backend",
+      "technologies": [
+        {
+          "name": "Firebase",
+          "image": "https://img.icons8.com/color/144/null/firebase.png"
+        }
+      ]
     },
     {
-      "name": "GitHub",
-      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
-      "category": "Tools"
+      "category": "Tools",
+      "technologies": [
+        {
+          "name": "GitHub",
+          "image": "https://img.icons8.com/material-outlined/96/null/github.png"
+        }
+      ]
     }
   ],
   "projects": [
     {
-      "name": "Project Title",
-      "techstack": "HTML5, CSS3, JavaScript, jQuery",
       "category": "MERN Stack",
-      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": ""
-      }
+      "projectDetails": [
+        {
+          "name": "Project Title",
+          "description": "Project Description",
+          "techstack": "HTML5, CSS3, JavaScript, jQuery",
+          "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+          "links": {
+            "code": "",
+            "video": "",
+            "visit": ""
+          }
+        },
+        {
+          "name": "Project 2 Title",
+          "description": "Project 2 Description",
+          "techstack": "HTML5, CSS3, JavaScript, jQuery",
+          "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+          "links": {
+            "code": "",
+            "video": "",
+            "visit": ""
+          }
+        }
+      ]
     },
     {
-      "name": "Project Title",
-      "techstack": "Flutter, Dart, Firebase",
       "category": "Flutter",
-      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": ""
-      }
-    },
-    {
-      "name": "Project Title",
-      "techstack": "PHP, MySQL, HTML5, CSS3, Bootstrap, JavaScript",
-      "category": "LAMP Stack",
-      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": ""
-      }
+      "projectDetails": [
+        {
+          "name": "Project Title",
+          "description": "Project Description",
+          "techstack": "Flutter, Dart, Firebase",
+          "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+          "links": {
+            "code": "",
+            "video": "",
+            "visit": ""
+          }
+        },
+        {
+          "name": "Project Title",
+          "description": "Project Description",
+          "techstack": "PHP, MySQL, HTML5, CSS3, Bootstrap, JavaScript",
+          "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+          "links": {
+            "code": "",
+            "video": "",
+            "visit": ""
+          }
+        }
+      ]
     }
   ],
   "educations": [

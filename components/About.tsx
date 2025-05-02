@@ -14,7 +14,7 @@ const About = ({ aboutData, name }: Props) => {
     const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData
 
     return (
-        <SectionWrapper id="about" className="min-h-[90vh] pt-12 bg-gradient-to-b from-white to-gray-100/20 dark:from-grey-900 dark:to-grey-900">
+        <SectionWrapper id="about" className="min-h-[80vh] pt-12 bg-gradient-to-b from-white to-gray-100/20 dark:from-grey-900 dark:to-grey-900">
             <h2 className="text-4xl text-center">About Me</h2>
 
             <div className="w-full lg:w-11/12 2xl:w-4/5 mt-2 lg:mt-20 mx-auto flex flex-col md:gap-4 lg:flex-row justify-between items-center">

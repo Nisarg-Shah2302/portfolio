@@ -1,19 +1,34 @@
 type skill = {
     name: string,
     image: string,
-    category: string
+    // category: string   
 }
 
-type project = {
+type technology = {
+    name: string;
+    image: string;
+}
+
+type SkillCategory = {
+    category: string;
+    technologies: technology[];
+}
+
+type ProjectDetail = {
     name: string,
     image: string,
     techstack: string,
-    category: string,
     links: {
         visit: string,
         code: string,
         video: string
-    }
+    },
+    description: string
+}
+
+type ProjectCategory = {
+    category: string,
+    projectDetails: ProjectDetail[]
 }
 
 type experience = {
@@ -57,11 +72,11 @@ type social = {
 type data = {
     main: main,
     about: about,
-    skills: skill[],
-    projects: project[],
+    skills: SkillCategory[],
+    projects: ProjectCategory[],
     experiences: experience[],
     educations: education[]
     socials: social[]
 }
 
-export type { data, main, about, skill, project, experience, education, social };
+export type { data, main, about, skill, experience, education, social, SkillCategory, technology, ProjectCategory, ProjectDetail };
