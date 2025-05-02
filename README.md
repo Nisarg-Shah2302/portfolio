@@ -9,7 +9,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/github/forks/jigar-sable/next-portfolio?style=for-the-badge" />
-  <a href="https://jigarsable.vercel.app">
+  <a href="https://portfolio-nisarg-shah2302s-projects.vercel.app/">
     <img src="https://img.shields.io/static/v1?label=&message=View%20Demo&style=for-the-badge&color=black&logo=vercel" />
   </a>
 </p>
