@@ -1,4 +1,4 @@
-![Portfolio](https://res.cloudinary.com/do3ejzovd/image/upload/v1746189745/portfolio_lvqbqc.png)
+![Portfolio](/public/portfolio-fork-dark.png)
 
 <div align="center">
   &middot;
@@ -8,7 +8,6 @@
   <br/>
 
   <p align="center">
-    <img src="https://img.shields.io/github/forks/jigar-sable/next-portfolio?style=for-the-badge" />
   <a href="https://portfolio-nisarg-shah2302s-projects.vercel.app/">
     <img src="https://img.shields.io/static/v1?label=&message=View%20Demo&style=for-the-badge&color=black&logo=vercel" />
   </a>
@@ -18,7 +17,7 @@
   <a href="#introduction-">Introduction</a> •
   <a href="#tech-stack-%EF%B8%8F">Tech Stack</a> •
   <a href="#development-">Development</a> •
-    <a href="#deployment-">Deployment</a> •
+  <a href="#deployment-">Deployment</a> •
   <a href="#license-">License</a>
 </p>
 
@@ -124,7 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 If you want to contact me, you can reach me through below handles.
 
-[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jigar-sable)
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nisarg-shah)
 
 ## Support 🙌
 
