@@ -50,8 +50,8 @@ const ProjectCard = ({ name, image, techstack, links, description }: ProjectDeta
 
             <div className="my-2 flex flex-col gap-3">
                 <h3 className="text-xl font-medium">{name}</h3>
-                <h4 className="text-sm text-gray-800 font-small"><p>{description?.trim()}</p></h4>
-                <p className="text-sm text-gray-700"> <span className="font-medium">Tech Stack:</span> {techstack}</p>
+                <h4 className="text-sm text-gray-500 dark:text-gray-400 font-medium"><p>{description?.trim()}</p></h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium"> <span className="font-medium">Tech Stack:</span> {techstack}</p>
             </div>
 
         </motion.div>
