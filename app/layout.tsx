@@ -20,7 +20,7 @@ export default function RootLayout({
         <body className={`${poppins.className} font-poppins bg-gray-100/50 dark:bg-grey-900 text-black dark:text-white overflow-x-hidden`}>
           <ClientProvider>
           {children}
-          <Analytics mode="development"/>
+          <Analytics />
         </ClientProvider>
         </body>
     </html>
