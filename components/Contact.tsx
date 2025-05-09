@@ -25,24 +25,29 @@ const Contact = () => {
         }
 
         setLoading(true);
-        axios.post("/api/mail", {
-            name: values.name,
-            email: values.email,
-            message: values.message,
-        }).then((res) => {
-            if (res.status === 200) {
-                setValues({ name: "", email: "", message: "" });
+        try {
+            axios.post("/api/mail", {
+                name: values.name,
+                email: values.email,
+                message: values.message,
+            }).then((res) => {
+                if (res.status === 200) {
+                    setValues({ name: "", email: "", message: "" });
+                    setLoading(false);
+                    setSuccess(true);
+                    toast.success(res.data.message)
+                } else {
+                    setLoading(false);
+                    toast.error(res.data.message)
+                }
+            }).catch((error: any) => {
                 setLoading(false);
-                setSuccess(true);
-                toast.success(res.data.message)
-            } else {
-                setLoading(false);
-                toast.error(res.data.message)
-            }
-        }).catch((err) => {
+                toast.error(error.response?.data?.message)
+            });
+        } catch (error: any) {
             setLoading(false);
-            toast.error(err.message)
-        });
+            toast.error(error.response?.data?.message)
+        }
     };
 
     const handleChange = (e: | React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -54,8 +59,8 @@ const Contact = () => {
 
     return (
         <SectionWrapper id="contact" className="mb-16 mx-4 lg:mx-0">
+            {/* <ToastContainer position="top-right" autoClose={5000} /> */}
             <h2 className="text-center text-4xl">Contact Me</h2>
-            <ToastContainer />
 
             <div className="w-full lg:w-5/6 2xl:w-3/4 mt-10 md:mt-16 mx-auto flex justify-between rounded-xl">
                 {/* blurDataURL="https://i.imgur.com/owZdhjA.png" */}
