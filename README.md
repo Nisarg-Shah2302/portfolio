@@ -33,7 +33,7 @@ Next Portfolio is built using Next.js and Tailwind CSS for a modern design and r
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Firebase](https://firebase.google.com)
-- [SendGrid](https://sendgrid.com)
+- [Resend](https://resend.com)
 - [Framer Motion](https://www.framer.com/motion)
 
 <!-- ## Tech Stack 🛠️
@@ -78,14 +78,14 @@ Here are the steps to run the portfolio locally.
 
 5. Create an `.env.local` file in the root directory, and add the following variables with your firebase config:
    ```
-   SENDGRID_API_KEY=XXXXXXXX
+   NEXT_PUBLIC_RESEND_MAIL_API_KEY=XXXXXXXX
    NEXT_PUBLIC_FIREBASE_DATABASE_URL=XXXXXXXXXX
-   MAIL_FROM=YOUR_MAIL_ID
-   MAIL_TO=YOUR_MAIL_ID
+   NEXT_PUBLIC_MAIL_FROM=YOUR_MAIL_ID
+   NEXT_PUBLIC_MAIL_TO=YOUR_MAIL_ID
    ```
-   <!-- write text to tell user to get sendgrid keys from dashboard and add here -->
+   <!-- write text to tell user to get resend keys from dashboard and add here -->
 
-> **Note**: `SENDGRID_API_KEY` - Create an API key from "Settings" -> "API Keys" with "Restricted Access" to only "Mail Send"
+> **Note**: `NEXT_PUBLIC_RESEND_MAIL_API_KEY` - Create an API key from "API Keys" with "Sending Access"
 
 1. Update the sample [data.json](https://github.com/Nisarg-Shah2302/portfolio/blob/main/data.json) provided, with your data or directly import the same and edit using firebase later. (For storing images you can use [Cloudinary](https://cloudinary.com) or [Firebase Storage](https://firebase.google.com/docs/storage))
 
@@ -108,10 +108,10 @@ Here are the steps to run the portfolio locally.
 
 3. Add the following environment variables in the Vercel dashboard:
    ```
-   SENDGRID_API_KEY=XXXXXXXX
+   NEXT_PUBLIC_RESEND_MAIL_API_KEY=XXXXXXXX
    NEXT_PUBLIC_FIREBASE_DATABASE_URL=XXXXXXXXXX
-   MAIL_FROM=YOUR_MAIL_ID
-   MAIL_TO=YOUR_MAIL_ID
+   NEXT_PUBLIC_MAIL_FROM=YOUR_MAIL_ID
+   NEXT_PUBLIC_MAIL_TO=YOUR_MAIL_ID
    ```
 4. Hurray! You successfully deployed the portfolio🥳
 
