@@ -10,10 +10,22 @@ const firebaseConfig = {
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDERID,
     appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
-    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENTD
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 export const database = getDatabase(app);
+
+// Export a function to safely initialize analytics on the client
+export const initAnalytics = () => {
+  if (typeof window !== 'undefined') {
+    try {
+      return getAnalytics(app);
+    } catch (e) {
+      // Analytics may fail in some environments (e.g., localhost without HTTPS)
+      return null;
+    }
+  }
+  return null;
+};

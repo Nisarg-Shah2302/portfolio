@@ -1,11 +1,11 @@
 import { FaNodeJs } from "react-icons/fa"
 import HomePage from "./HomePage"
-// import { ref, get } from "firebase/database"
-// import { database } from "@/firebase"
+import localData from '../data.json'
 
 async function getData() {
-
-  // return await (await get(ref(database))).val()
+  if (process.env.NODE_ENV === 'development') {
+    return localData
+  }
 
   const DB_URL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL + '.json'
   const res = await fetch(DB_URL, { cache: 'no-store' })

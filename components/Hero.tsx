@@ -3,6 +3,8 @@ import { useTheme } from 'next-themes'
 import { Link as ScrollLink } from 'react-scroll'
 import Typewriter from 'typewriter-effect';
 import { IoIosArrowForward } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import wavingHand from '@/public/waving-hand.gif';
 import { main } from '@/types/main';
 
@@ -10,10 +12,24 @@ interface HeroProps {
     mainData: main
 }
 
+const statsContainerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } }
+};
+
+const statItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+};
+
+const AI_TAGS = ['LangChain', 'OpenAI', 'Claude API', 'AI Agents', 'RAG', 'Microservices', 'Microfrontend', 'Gen AI'];
+
 const Hero = ({ mainData }: HeroProps) => {
 
     const { theme } = useTheme()
     const { name, titles, heroImage, shortDesc, techStackImages } = mainData
+
+    const [statsRef, statsInView] = useInView({ threshold: 0.3, triggerOnce: true });
 
     return (
         <section id='home' className={`${theme === 'dark' && "bg-grey-900"} relative min-h-screen w-full mx-auto overflow-hidden`}>
@@ -30,16 +46,24 @@ const Hero = ({ mainData }: HeroProps) => {
 
             <div className="py-16 lg:py-48 flex flex-col-reverse lg:flex-row justify-around gap-10 lg:gap-0">
 
-                <div className="flex flex-col gap-4 md:gap-6 text-left lg:w-1/2 2xl:w-1/3 mx-4 md:mx-6 xl:mx-0">
+                <div className="flex flex-col gap-4 md:gap-5 text-left lg:w-1/2 2xl:w-1/3 mx-4 md:mx-6 xl:mx-0">
+
+                    {/* Experience badge */}
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-600/10 border border-violet-600/30 text-violet-600 dark:text-violet-400 text-xs font-semibold tracking-wider uppercase w-fit animate-float">
+                        ✦ 9+ Years of Experience
+                    </span>
+
                     <div className="flex items-center gap-1">
                         <Image unoptimized={true} alt='waving-hand' width={30} height={30} src={wavingHand} />
                         <p className="text-lg md:text-xl mt-2 md:mt-1.5">
                             Hey
                         </p>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold relative">
-                        I&apos;m {name}
+
+                    <h1 className="text-4xl md:text-6xl font-extrabold relative">
+                        I&apos;m <span className="bg-gradient-to-r from-gray-900 via-violet-800 to-violet-600 dark:from-white dark:via-violet-200 dark:to-violet-400 bg-clip-text text-transparent">{name}</span>
                     </h1>
+
                     <div className="flex flex-row items-start md:items-center gap-1.5">
                         <h2 className="text-lg md:text-2xl">
                             I am into
@@ -61,9 +85,38 @@ const Hero = ({ mainData }: HeroProps) => {
                         {shortDesc}
                     </p>
 
-                    {/* <a href="https://sppuprep.tech" target="_blank" rel="noopener noreferrer" className="relative whitespace-nowrap before:absolute before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500 before:bg-violet-300 dark:before:bg-violet-600">
-                        <span className="relative">SPPU Prep</span>
-                    </a> */}
+                    {/* AI tagline strip */}
+                    <div className="flex flex-wrap gap-2 py-3 px-4 rounded-xl bg-violet-50 dark:bg-violet-950/30 border border-violet-200/60 dark:border-violet-700/40">
+                        {AI_TAGS.map(tag => (
+                            <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-white dark:bg-violet-900/40 border border-violet-300/50 dark:border-violet-600/40 text-violet-700 dark:text-violet-300 font-medium">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+
+                    {/* Stats row */}
+                    <motion.div
+                        ref={statsRef}
+                        variants={statsContainerVariants}
+                        initial="hidden"
+                        animate={statsInView ? 'visible' : 'hidden'}
+                        className="flex items-center gap-6 md:gap-8"
+                    >
+                        <motion.div variants={statItemVariants} className="flex flex-col">
+                            <span className="text-2xl md:text-3xl font-extrabold text-violet-600 dark:text-violet-400">9+</span>
+                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Yrs Experience</span>
+                        </motion.div>
+                        <div className="w-px h-10 bg-gray-300 dark:bg-gray-700" />
+                        <motion.div variants={statItemVariants} className="flex flex-col">
+                            <span className="text-2xl md:text-3xl font-extrabold text-violet-600 dark:text-violet-400">20+</span>
+                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Projects</span>
+                        </motion.div>
+                        <div className="w-px h-10 bg-gray-300 dark:bg-gray-700" />
+                        <motion.div variants={statItemVariants} className="flex flex-col">
+                            <span className="text-2xl md:text-3xl font-extrabold text-violet-600 dark:text-violet-400">10+</span>
+                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">AI Apps</span>
+                        </motion.div>
+                    </motion.div>
 
                     <ScrollLink
                         className="w-fit text-sm md:text-base py-2 px-4 cursor-pointer flex items-center gap-1 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors group text-white"
@@ -78,22 +131,25 @@ const Hero = ({ mainData }: HeroProps) => {
                     </ScrollLink>
                 </div>
 
-                <div className="relative mx-auto lg:mx-0 mt-12 md:mt-16 lg:mt-0">
-                    <div className="w-56 h-56 md:w-80 md:h-80 lg:-translate-x-16">
-                        <Image alt='avatar' width={1000} height={1000} className="rounded-full w-full h-full object-cover" src={heroImage} />
-                    </div>
+                {/* Floating avatar wrapper */}
+                <div className="animate-float">
+                    <div className="relative mx-auto lg:mx-0 mt-12 md:mt-16 lg:mt-0">
+                        <div className="w-56 h-56 md:w-80 md:h-80 lg:-translate-x-16">
+                            <Image alt='avatar' width={1000} height={1000} className="rounded-full w-full h-full object-cover" src={heroImage} />
+                        </div>
 
-                    <div className="absolute grid -top-6 -left-12 lg:-top-14 lg:-left-32 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
-                        <Image alt='tech-stack' className="h-8 w-8 md:h-10 md:w-10 object-cover" src={techStackImages[0]} width={100} height={100} />
-                    </div>
-                    <div className="absolute grid top-0 -right-12 lg:-right-4 w-14 h-14 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
-                        <Image alt='tech-stack' className="h-8 w-8 md:h-10 md:w-10 object-cover" src={techStackImages[1]} width={100} height={100} />
-                    </div>
-                    <div className="absolute grid bottom-[4rem] md:bottom-24 -right-16 md:-right-20 lg:bottom-[8.5rem] lg:-right-12 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
-                        <Image alt='tech-stack' className="h-6 w-6 md:h-10 md:w-10 object-cover" src={techStackImages[2]} width={100} height={100} />
-                    </div>
-                    <div className="absolute grid -bottom-10 -right-8 lg:-bottom-0 lg:right-6 w-14 md:w-16 h-14 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
-                        <Image alt='tech-stack' className="h-10 w-10 object-cover" src={techStackImages[3]} width={100} height={100} />
+                        <div className="absolute grid -top-6 -left-12 lg:-top-14 lg:-left-32 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
+                            <Image alt='tech-stack' className="h-8 w-8 md:h-10 md:w-10 object-cover" src={techStackImages[0]} width={100} height={100} />
+                        </div>
+                        <div className="absolute grid top-0 -right-12 lg:-right-4 w-14 h-14 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
+                            <Image alt='tech-stack' className="h-8 w-8 md:h-10 md:w-10 object-cover" src={techStackImages[1]} width={100} height={100} />
+                        </div>
+                        <div className="absolute grid bottom-[4rem] md:bottom-24 -right-16 md:-right-20 lg:bottom-[8.5rem] lg:-right-12 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
+                            <Image alt='tech-stack' className="h-6 w-6 md:h-10 md:w-10 object-cover" src={techStackImages[2]} width={100} height={100} />
+                        </div>
+                        <div className="absolute grid -bottom-10 -right-8 lg:-bottom-0 lg:right-6 w-14 md:w-16 h-14 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow">
+                            <Image alt='tech-stack' className="h-10 w-10 object-cover" src={techStackImages[3]} width={100} height={100} />
+                        </div>
                     </div>
                 </div>
 

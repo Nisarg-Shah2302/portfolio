@@ -2,6 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google';
 import ClientProvider from './ClientProvider';
 import { Analytics } from '@vercel/analytics/react';
+import FirebaseAnalytics from '../components/FirebaseAnalytics';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({
           <ClientProvider>
           {children}
           <Analytics />
+          <FirebaseAnalytics />
         </ClientProvider>
         </body>
     </html>
