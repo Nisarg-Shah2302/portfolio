@@ -1,44 +1,45 @@
 {
   "main": {
-    "name": "Jhon Doe",
-    "shortDesc": "I focus on developing user-friendly web applications that meet the client's requirements, with attention to detail, scalability, and performance.",
+    "name": "Nisarg Shah",
+    "shortDesc": "Passionate Software Engineer with 8+ years of rich experience with a knack for creating intuitive and high-performing web applications. Skilled at writing clear, concise code that is easy to maintain and troubleshoot.",
     "titles": [
-      "Frontend Development",
-      "Backend Development",
-      "App Development"
+      "Senior Software Engineer",
+      "Product Team Lead",
+      "Full Stack Developer",
+      "AI-Driven Development"
     ],
-    "heroImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "heroImage": "/nisarg-shah.jpeg",
     "techStackImages": [
-      "https://img.icons8.com/color/144/000000/material-ui.png",
-      "https://img.icons8.com/color/144/000000/html-5--v1.png",
-      "https://img.icons8.com/color/144/000000/redux.png",
-      "https://img.icons8.com/color/144/000000/chakra-ui.png"
+      "https://img.icons8.com/color/144/000000/react.png",
+      "https://img.icons8.com/color/144/000000/nodejs.png",
+      "https://img.icons8.com/color/144/000000/artificial-intelligence.png",
+      "https://img.icons8.com/color/144/000000/mongodb.png"
     ]
   },
   "about": {
-    "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
-    "aboutImageCaption": "< I build stuff 🚀/>",
-    "title": "Full Stack Developer",
-    "about": "I am a Full-Stack developer based in Pune, India. I'm an Information Technology undergraduate from SPPU, and my journey in web development began during my first year of college. I'm passionate about creating beautiful, functional, and user-friendly websites and applications, and I'm constantly pushing myself to learn and grow as a developer. Love building full-stack clones and side projects.",
+    "aboutImage": "/nisarg-shah.jpeg",
+    "aboutImageCaption": "< I build things that matter />",
+    "title": "Senior Software Engineer (Product Team Lead) | 8+ Years",
+    "about": "Passionate Software Engineer with 8+ years of rich experience with a knack for creating intuitive and high-performing web applications. Skilled at writing clear, concise code that is easy to maintain and troubleshoot. Ready to bring coding expertise and innovative problem-solving skills and I excel at motivating and mentoring to develop the team.",
     "callUrl": "",
     "resumeUrl": ""
   },
   "socials": [
     {
       "icon": "FaLinkedin",
-      "link": "https://www.linkedin.com/in/jhon-doe"
+      "link": "https://www.linkedin.com/in/nisarg-shah-289850103/"
     },
     {
       "icon": "FaGithub",
-      "link": "https://github.com/jhon-doe"
+      "link": "https://github.com/Nisarg-Shah2302"
     },
     {
       "icon": "FaInstagram",
-      "link": "https://www.instagram.com/jhondoe"
+      "link": "https://www.instagram.com/nisarg_shah"
     },
     {
       "icon": "FaTwitter",
-      "link": "https://twitter.com/jhondoe"
+      "link": "https://twitter.com/nisarg_shah"
     }
   ],
   "skills": [
@@ -48,6 +49,34 @@
         {
           "name": "React",
           "image": "https://img.icons8.com/color/144/null/react.png"
+        },
+        {
+          "name": "Redux",
+          "image": "https://img.icons8.com/color/144/000000/redux.png"
+        },
+        {
+          "name": "TypeScript",
+          "image": "https://img.icons8.com/color/144/null/typescript.png"
+        },
+        {
+          "name": "JavaScript",
+          "image": "https://img.icons8.com/color/144/null/javascript.png"
+        },
+        {
+          "name": "JQuery",
+          "image": "https://img.icons8.com/ios-filled/144/null/jquery.png"
+        },
+        {
+          "name": "Bootstrap",
+          "image": "https://img.icons8.com/color/144/null/bootstrap.png"
+        },
+        {
+          "name": "Material UI",
+          "image": "https://img.icons8.com/color/144/000000/material-ui.png"
+        },
+        {
+          "name": "React Native",
+          "image": "https://img.icons8.com/color/144/null/react-native.png"
         }
       ]
     },
@@ -55,8 +84,90 @@
       "category": "Backend",
       "technologies": [
         {
-          "name": "Firebase",
-          "image": "https://img.icons8.com/color/144/null/firebase.png"
+          "name": "Node.js",
+          "image": "https://img.icons8.com/color/144/null/nodejs.png"
+        },
+        {
+          "name": "Express",
+          "image": "https://img.icons8.com/color/144/null/express-js.png"
+        },
+        {
+          "name": "MongoDB",
+          "image": "https://img.icons8.com/color/144/null/mongodb.png"
+        },
+        {
+          "name": "MySQL",
+          "image": "https://img.icons8.com/color/144/null/mysql-logo.png"
+        },
+        {
+          "name": "Laravel",
+          "image": "https://img.icons8.com/fluency/144/null/laravel.png"
+        },
+        {
+          "name": "PHP",
+          "image": "https://img.icons8.com/officexs/144/null/php-logo.png"
+        },
+        {
+          "name": "AWS",
+          "image": "https://img.icons8.com/color/144/null/amazon-web-services.png"
+        }
+      ]
+    },
+    {
+      "category": "AI & Gen AI",
+      "technologies": [
+        {
+          "name": "OpenAI",
+          "image": "https://img.icons8.com/color/144/null/chatgpt.png"
+        },
+        {
+          "name": "LangChain",
+          "image": "https://img.icons8.com/color/144/null/artificial-intelligence.png"
+        },
+        {
+          "name": "Claude API",
+          "image": "https://img.icons8.com/color/144/null/bot.png"
+        },
+        {
+          "name": "AI Agents",
+          "image": "https://img.icons8.com/color/144/null/robot-2.png"
+        },
+        {
+          "name": "RAG Systems",
+          "image": "https://img.icons8.com/color/144/null/brain.png"
+        },
+        {
+          "name": "Cursor",
+          "image": "https://img.icons8.com/color/144/null/code.png"
+        }
+      ]
+    },
+    {
+      "category": "DevOps",
+      "technologies": [
+        {
+          "name": "Docker",
+          "image": "https://img.icons8.com/color/144/null/docker.png"
+        },
+        {
+          "name": "Kubernetes",
+          "image": "https://img.icons8.com/color/144/null/kubernetes.png"
+        },
+        {
+          "name": "GitHub",
+          "image": "https://img.icons8.com/material-outlined/96/null/github.png"
+        },
+        {
+          "name": "Azure",
+          "image": "https://img.icons8.com/color/144/null/azure-1.png"
+        },
+        {
+          "name": "CI/CD",
+          "image": "https://img.icons8.com/color/144/null/deployment.png"
+        },
+        {
+          "name": "GitLab",
+          "image": "https://img.icons8.com/color/144/null/gitlab.png"
         }
       ]
     },
@@ -64,31 +175,43 @@
       "category": "Tools",
       "technologies": [
         {
-          "name": "GitHub",
-          "image": "https://img.icons8.com/material-outlined/96/null/github.png"
+          "name": "Figma",
+          "image": "https://img.icons8.com/color/144/null/figma.png"
+        },
+        {
+          "name": "Postman",
+          "image": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/null/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
+        },
+        {
+          "name": "Jira",
+          "image": "https://img.icons8.com/color/144/null/jira.png"
+        },
+        {
+          "name": "WindSurf",
+          "image": "https://img.icons8.com/color/144/null/wind.png"
         }
       ]
     }
   ],
   "projects": [
     {
-      "category": "MERN Stack",
+      "category": "Ecommerce",
       "projectDetails": [
         {
-          "name": "Project Title",
-          "description": "Project Description",
-          "techstack": "HTML5, CSS3, JavaScript, jQuery",
+          "name": "DOP — PepsiCo (CN, NZ, AU)",
+          "description": "B2B desktop e-commerce platform for PepsiCo across three regions. Led creation using agile methodologies, enhancing efficiency by 75%. Designed reusable React components with REST API integration, reducing development effort by 50% across three projects. Leveraged Azure DevOps for version control and task management.",
+          "techstack": "React, Redux, REST API, Microsoft Azure, DevOps",
           "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
           "links": {
             "code": "",
             "video": "",
-            "visit": ""
+            "visit": "https://cop.pepsico.com.cn/home"
           }
         },
         {
-          "name": "Project 2 Title",
-          "description": "Project 2 Description",
-          "techstack": "HTML5, CSS3, JavaScript, jQuery",
+          "name": "Snacks Store",
+          "description": "B2C eCommerce application with complex data logic for products and pricing, n-level coupons and discounts, and location-based shipping methods. Integration of OKTA authentication, PayPal gateway, and AppDynamics monitoring. Gained repetitive customers and orders by 60%.",
+          "techstack": "React, Redux, Material UI, Bootstrap, Azure, OKTA, PayPal",
           "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
           "links": {
             "code": "",
@@ -99,12 +222,12 @@
       ]
     },
     {
-      "category": "Flutter",
+      "category": "Enterprise",
       "projectDetails": [
         {
-          "name": "Project Title",
-          "description": "Project Description",
-          "techstack": "Flutter, Dart, Firebase",
+          "name": "ERP — InHouse Product",
+          "description": "IndiaNIC Enterprise Resource Planning system built with React frontend and Laravel/Lumen backend. Developed modules including Lead Management (LMS), HR, Products, Inbox, and Support. Collaborated with a 10-member team of developers, UI/UX designers, and testers.",
+          "techstack": "React, Laravel, Lumen, MySQL",
           "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
           "links": {
             "code": "",
@@ -113,9 +236,9 @@
           }
         },
         {
-          "name": "Project Title",
-          "description": "Project Description",
-          "techstack": "PHP, MySQL, HTML5, CSS3, Bootstrap, JavaScript",
+          "name": "TrustElev8",
+          "description": "Real-time age estimation web application with webcam integration. Used React Hooks and Context API for efficient state management and smooth real-time rendering. All image data is processed directly in the browser ensuring full user privacy — no data sent to server.",
+          "techstack": "React, TypeScript, Context API, Webcam API",
           "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
           "links": {
             "code": "",
@@ -128,40 +251,42 @@
   ],
   "educations": [
     {
-      "institute": "XYZ School | CBSE",
-      "degree": "HSC Science",
-      "duration": "2014 - 2016"
-    },
-    {
-      "institute": "XYZ College Of Engineering",
-      "degree": "B.Tech CSE",
-      "duration": "2016 - 2020",
-      "desc": [
-        "Pursuing IT Engineering course from ABC University",
-        "Worked on web application development using HTML, CSS, and JavaScript, designing a database system using SQL",
-        "Familiar with software development methodologies and project management practices, including Agile and Waterfall methodologies."
-      ]
+      "institute": "Gujarat Technological University, Gandhinagar",
+      "degree": "B.E, Computer Engineering | CGPA: 6.6/10",
+      "duration": "2012 - 2016"
     }
   ],
   "experiences": [
     {
-      "company": "ABC Tech Solutions",
-      "position": "Web Developer",
-      "duration": "2020 -2022",
+      "company": "IndiaNIC Infotech",
+      "position": "Senior Software Engineer",
+      "duration": "01/2020 - Present",
       "desc": [
-        "Assisted with design and development of project.",
-        "Worked on building the product from scratch and built multiple dashboards.",
-        "Skills: HTML · CSS · JavaScript · TailwindCSS · ReactJS · NodeJS · MySQL · REST APIs"
+        "Full-Stack Development — Built and optimised web and e-commerce applications using React (frontend) and Pimcore (backend), handling complex data structures and calculations.",
+        "Process & Performance Improvement — Reduced project delivery time by 25% and boosted system performance by 70% through efficient software engineering practices and agile methodologies.",
+        "Leadership & Team Growth — Led a team of three engineers, driving quality software delivery while improving company revenue by 30% through better SDLC processes and mentoring.",
+        "DevOps & AI-Driven Development — Exploring Docker, Kubernetes, CI/CD, and microservices while leveraging AI-powered IDE tools like Windsurf, Cursor, and Claude to enhance development efficiency.",
+        "ERP & Business Solutions — Developed and enhanced an in-house ERP system with key modules like Projects, HR, and Inbox, improving business operations."
       ]
     },
     {
-      "company": "XYZ Tech Solutions",
-      "position": "Web Developer",
-      "duration": "2022 - present",
+      "company": "iFlair Web Technologies Pvt Ltd",
+      "position": "Software Developer",
+      "duration": "04/2017 - 12/2019",
       "desc": [
-        "Assisted with design and development of project.",
-        "Worked on building the product from scratch and built multiple dashboards.",
-        "Skills: HTML · CSS · JavaScript · TailwindCSS · ReactJS · NodeJS · MySQL · REST APIs"
+        "Worked on Laravel and PHP based projects delivering robust web solutions.",
+        "Achieved 100% on-time project delivery to meet regulatory milestones.",
+        "Worked closely with customers to understand their requirements and implemented tailored software solutions."
+      ]
+    },
+    {
+      "company": "Radixweb",
+      "position": "Software Developer",
+      "duration": "07/2016 - 03/2017",
+      "desc": [
+        "Worked on a PHP-based printing solution product (One Print Shop).",
+        "Worked in core PHP and MySQL handling large volumes of data.",
+        "Collaborated with cross-functional teams to identify and implement software solutions to meet customer needs."
       ]
     }
   ]

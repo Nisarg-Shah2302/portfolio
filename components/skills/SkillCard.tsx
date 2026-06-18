@@ -8,6 +8,7 @@ const Skill = ({ name, image }: skill) => {
 
     const { theme } = useTheme();
     const [bgColor, setBgColor] = useState("")
+    const invertNames = ["GitHub", "Vercel", "NextJS", "ExpressJS", "SaaS", "JQuery", "Laravel", "AWS", "Kubernetes"];
     useEffect(() => {
         new FastAverageColor().getColorAsync(image)
             .then(color => {
@@ -22,8 +23,9 @@ const Skill = ({ name, image }: skill) => {
     return (
         <div className="flex flex-col justify-center items-center gap-2">
             <div title={name} style={{ backgroundColor: bgColor }}
-                className={"h-20 w-20 md:h-24 md:w-24 rounded-full bg-gray-100 dark:bg-grey-800 flex items-center justify-center"}>
-                <Image alt="skill" width={100} height={100} className={`h-12 w-12 md:h-14 md:w-14 object-contain ${theme === 'dark' && (name === "GitHub" || name === "Vercel" || name === "NextJS" || name === "ExpressJS" ? 'invert' : 'invert-0')}`} src={image} />
+                className={"h-20 w-20 md:h-24 md:w-24 rounded-full bg-gray-100 dark:bg-grey-800 flex items-center justify-center ring-2 ring-transparent hover:ring-violet-500/60 hover:scale-110 hover:shadow-[0_0_16px_rgba(124,58,237,0.35)] transition-all duration-300 cursor-default"}>
+                <Image alt="skill" width={100} height={100} className={`h-12 w-12 md:h-14 md:w-14 object-contain 
+                    ${theme === 'dark' && invertNames.includes(name) ? 'invert' : 'invert-0'}`} src={image} />
             </div>
             <p className="text-sm md:text-base">{name}</p>
         </div>

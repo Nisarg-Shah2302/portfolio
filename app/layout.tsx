@@ -1,8 +1,8 @@
-'use client';
 import './globals.css'
-import { Poppins } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
+import { Poppins } from 'next/font/google';
+import ClientProvider from './ClientProvider';
 import { Analytics } from '@vercel/analytics/react';
+import FirebaseAnalytics from '../components/FirebaseAnalytics';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,15 +16,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head />
-      <ThemeProvider attribute='class' defaultTheme='light'>
         <body className={`${poppins.className} font-poppins bg-gray-100/50 dark:bg-grey-900 text-black dark:text-white overflow-x-hidden`}>
-          {/* <body className='bg-gray-100/50 dark:bg-grey-900 text-black dark:text-white overflow-x-hidden'> */}
+          <ClientProvider>
           {children}
-          <Analytics mode="development"/>
+          <Analytics />
+          <FirebaseAnalytics />
+        </ClientProvider>
         </body>
-      </ThemeProvider>
     </html>
   )
 }

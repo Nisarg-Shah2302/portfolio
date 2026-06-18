@@ -21,7 +21,12 @@ export default function Header({ logo }: { logo: string }) {
     }, [])
 
 
-    const navs = ['home', 'about', 'projects', 'experience', 'contact']
+    const navs = ['home', 'about', 'skills', 'projects', 'experience', 'contact']
+
+    const navLabels: Record<string, string> = {
+        home: 'Home', about: 'About', skills: 'Skills',
+        projects: 'Projects', experience: 'Experience', contact: 'Contact'
+    }
 
     return (
         <header className={`backdrop-filter backdrop-blur-lg ${scroll ? 'border-b bg-white bg-opacity-40' : 'border-b-0'} dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}>
@@ -42,7 +47,7 @@ export default function Header({ logo }: { logo: string }) {
                                 duration={500}
                                 isDynamic={true}
                             >
-                                {e}
+                                {navLabels[e] || e}
                             </ScrollLink>
                         </li>
                     ))}
@@ -55,7 +60,7 @@ export default function Header({ logo }: { logo: string }) {
             </nav>
 
             <nav className='p-4 flex sm:hidden items-center justify-between'>
-                {logo === 'Jigar Sable' ? <FaNodeJs size={28} /> : <span className='text-lg font-medium'>{logo.split(' ')[0]}</span>}
+                {logo === 'Nisarg Shah' ? <FaNodeJs size={28} /> : <span className='text-lg font-medium'>{logo.split(' ')[0]}</span>}
                 <div className='flex items-center gap-4'>
                     <span
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -72,7 +77,7 @@ export default function Header({ logo }: { logo: string }) {
                 <div className="flex flex-col p-4 gap-5 bg-gray-100/95 backdrop-filter backdrop-blur-sm dark:bg-grey-900/95 w-3/4">
                     <CgClose className='self-end my-2' size={20} onClick={() => setNavCollapse(true)} />
 
-                    {navs.slice(0, 4).map((e) => (
+                    {navs.slice(0, 5).map((e) => (
                         <ScrollLink
                             key={e}
                             className='hover:text-purple-600 py-1.5 px-4 rounded transition-colors capitalize cursor-pointer'
@@ -83,7 +88,7 @@ export default function Header({ logo }: { logo: string }) {
                             isDynamic={true}
                             onClick={() => setNavCollapse(true)}
                         >
-                            {e}
+                            {navLabels[e] || e}
                         </ScrollLink>
                     ))}
                     <ScrollLink
